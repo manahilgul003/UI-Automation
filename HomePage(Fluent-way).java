@@ -38,14 +38,7 @@ public class HomePage {
         return text;
     }
 
-    public String getNestedShadowText() {
-        WebElement shadowHost = getDriver().findElement(By.id("shadow_host"));
-        SearchContext shadowRoot = shadowHost.getShadowRoot();
-        WebElement shadowContent = shadowRoot.findElement(By.cssSelector("#nested_shadow_host"));
-        SearchContext shadowRootTwo = shadowContent.getShadowRoot();
-        String nestedText = shadowRootTwo.findElement(By.cssSelector("#nested_shadow_content > div")).getText();
-        return nestedText;
-    }
+ 
 
    public String getNestedText() {
 	 WebElement nestedText = getDriver ().findElement (By.id ("shadow_host"))
@@ -57,12 +50,4 @@ public class HomePage {
 	}
 
 
-    public String getNestedTextUsingJSExecutor() {
-        WebElement shadowHost = getDriver().findElement(By.id("shadow_host"));
-        SearchContext shadowRootOne = expandRootElement(shadowHost);
-        WebElement nestedShadowHost = shadowRootOne.findElement(By.cssSelector("#nested_shadow_host"));
-        SearchContext shadowRootTwo = expandRootElement(nestedShadowHost);
-        return shadowRootTwo.findElement(By.cssSelector("#nested_shadow_content > div"))
-                .getText();
-    }
 }
