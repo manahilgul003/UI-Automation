@@ -1,5 +1,5 @@
 #How To Automate Shadow DOM in Selenium WebDriver
-#Report By:Manahil Gul-QA Intern
+#Report By:Manahil Gul-QA Intern 
 #Understanding Shadow DOM and Selenium WebDriver
 The Shadow DOM is a feature in web development that allows the encapsulation of a web component’s internal structure, keeping it hidden from the main document's DOM tree. This encapsulation helps isolate styles and behaviors, preventing interference from global styles and other elements. Key concepts related to Shadow DOM include the shadow host (the regular DOM node to which the Shadow DOM is attached), the shadow tree (the DOM tree inside the Shadow DOM), the shadow boundary (where the Shadow DOM ends and the regular DOM begins), and the shadow root (the root node of the Shadow tree).
 #Locating and Interacting with Shadow DOM Elements
