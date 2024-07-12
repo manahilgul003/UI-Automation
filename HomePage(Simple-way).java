@@ -46,19 +46,4 @@ public class HomePage {
         return nestedText;
     }
 
-    public String getNestedText() {
-        WebElement nestedText = getDriver().findElement(By.id("shadow_host")).getShadowRoot()
-                .findElement(By.cssSelector("#nested_shadow_host")).getShadowRoot()
-                .findElement(By.cssSelector("#nested_shadow_content > div"));
-        return nestedText.getText();
-    }
-
-    public String getNestedTextUsingJSExecutor() {
-        WebElement shadowHost = getDriver().findElement(By.id("shadow_host"));
-        SearchContext shadowRootOne = expandRootElement(shadowHost);
-        WebElement nestedShadowHost = shadowRootOne.findElement(By.cssSelector("#nested_shadow_host"));
-        SearchContext shadowRootTwo = expandRootElement(nestedShadowHost);
-        return shadowRootTwo.findElement(By.cssSelector("#nested_shadow_content > div"))
-                .getText();
-    }
 }
