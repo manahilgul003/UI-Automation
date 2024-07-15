@@ -4,18 +4,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
 
 public class ParameterizedTests_CSV {
-    @ParameterizedTest(name="Run:{index} - value:{arguments}") //How many times the test will run(Size of array)
-    @ValueSource(ints ={1,5,6}) //only one parameter can be passed(type)
-    //Parametrized method
-    void intValues(int theParam){
-        System.out.println("theParam = " + theParam);
-    }
-    @ParameterizedTest
- @NullAndEmptySource //donot use with int,float,booleans
-    @ValueSource(strings={"firstString","SecondString"})
-    void stringValues(String theParam){
-        System.out.println("theParam = " + theParam);
-    }
+   
     @ParameterizedTest
     //for larger no of parameter values
     @CsvSource(value = {"Peter,Parker","black,widow","tony,stark"})
