@@ -2,7 +2,7 @@ package junit5tests;
 
 import org.junit.jupiter.api.*;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-public class FirstTestClass {
+public class LifeCycleMethods {
     @BeforeAll
    void beforeAll(){
         System.out.println("---This is the before all method");
