@@ -3,7 +3,7 @@ package junit5tests;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class FirstTestClass {
+public class WritingTests{
     @Test
     void  firstMethod(){
         System.out.println("This is the first test method");
